@@ -1,0 +1,54 @@
+
+:root {
+ --hue-neutral: 200;
+ --hue-wrong: 0;
+ --hue-correct: 145;
+}
+
+body{
+ --hue: var(--hue-neutral);
+ padding: 0;
+ margin:0;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vw;
+background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body .correct {
+ --heu: var(--hue-correct);
+}
+body .wrong{
+ --heu: var(--hue-wrong);
+}
+
+.container {
+ width: 800px;
+ max-width: 80%;
+ border-radius: 5px;
+ padding: 10px;
+ background: white;
+ box-shadow: 0 0 10px 2px;
+}
+
+.btn-grids {
+ display: grid;
+ grid-template-columns: repeat(2, auto);
+ gap: 10px;
+ margin: 20px 0;
+}
+
+.btn{
+ --hue: var(--hue-neutral);
+ background-color: hsl(var(--hue), 100%, 50%);
+border: 1px hsl(var(--hue), 100%, 30%);
+ padding: 5px 10px;
+ border-radius: 5px;
+color: white;
+outline: none;
+cursor: pointer;
+}
+
+
