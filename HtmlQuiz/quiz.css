@@ -20,6 +20,7 @@ background-color: hsl(var(--hue), 100%, 20%);
 body .correct {
  --heu: var(--hue-correct);
 }
+
 body .wrong{
  --heu: var(--hue-wrong);
 }
@@ -51,8 +52,7 @@ outline: none;
 cursor: pointer;
 }
 
-
-#start-btn, #next-btn{
+.start-btn, .next-btn{
 font-size: 1.5rem;
 font-weight: bold;
 padding: 10px 20px;

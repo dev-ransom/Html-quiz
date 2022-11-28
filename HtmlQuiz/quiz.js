@@ -16,9 +16,14 @@ const question =[
  {
   question: 'which one of this is JavaScript framework?',
   answers :[
-   {text : 'python', correct: false}
+   {text : 'python', correct: false},
+   {text : 'Django', correct: false},
+   {text : 'Selenium', correct: false},
+   {text : 'Cypress', correct: false}
   ]
  }
 ]
+
+
 
 
