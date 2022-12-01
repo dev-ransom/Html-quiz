@@ -10,6 +10,41 @@ const answersButtonElement = document.getElementById('answer-butttons')
 let shuffledQuestion , currentQuestionIndex;
 let QuizScore = 0;
 
+function showQuestion(question){
+
+ questionElement.innerText= question.Question;
+ question.answers.forEach((answers) =>{
+  const button = document.createElement
+ })
+}
+
+function resetState(){
+ clearStatusClass(document.body)
+ nextButton.classList.add("hide")
+ while(answersButtonElement.firstChild)
+ answersButtonElement.removeChild(answersButtonElement.firstChild)
+}
+
+function selectAnswers(e){
+ const selectedButton=e.target
+ const correct =selectedButton.dataset.correct
+
+ setStatusClass(document.body, correct)
+ Array.from(answersButtonElement.children).forEach((button)=>{
+  setStatusClass(button, button.dataset.correct)
+ })
+ if(shuffledQuestion.length > currentQuestionIndex +1){
+  nextButton.classList.remove('hide')
+ }else{
+  startButton.innerText = "restart"
+  startButton.remove("hide")
+ }
+ if(selectedButton.dataset =correct){
+  QuizScore++
+ }
+ document.getElementById("right-answers").innerHTML=QuizScore
+}
+
 function setStatusClass(element, correct){
 clearStatusClass(element)
 if(correct){
