@@ -10,11 +10,39 @@ const answersButtonElement = document.getElementById('answer-butttons')
 let shuffledQuestion , currentQuestionIndex;
 let QuizScore = 0;
 
-function showQuestion(question){
 
+
+startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () =>{
+ currentQuestionIndex++
+ setnextQuestion();
+})
+
+function startGame(){
+ startButton.classList.add('hide')
+ shuffledQuestion=question.sort(() =>Math.random() -0.5)
+ currentQuestionIndex=0;
+ questionContainerElement.classList.remove('hide')
+ setnextQuestion()
+ QuizScore=0;
+}
+
+function setnextQuestion(){
+ resetState();
+ showQuestion(shuffledQuestion[currentQuestionIndex])
+}
+
+function showQuestion(question){
  questionElement.innerText= question.Question;
  question.answers.forEach((answers) =>{
-  const button = document.createElement
+  const button = document.createElement('button')
+  button.innerText = answer.text;
+  button.classList.add('btn')
+  if(answer.correct){
+   button.dataset.correct =answer.correct
+  }
+  button.addEventListener('click', selectAnswers)
+  answersButtonElement.appendChild(button)
  })
 }
 
